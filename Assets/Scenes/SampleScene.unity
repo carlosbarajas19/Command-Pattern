@@ -637,7 +637,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &428936827
 GameObject:
@@ -922,7 +922,7 @@ GameObject:
   - component: {fileID: 624611144}
   - component: {fileID: 624611143}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -993,8 +993,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1386307165}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+      - m_Target: {fileID: 918509501}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
         m_MethodName: MoveLeft
         m_Mode: 1
         m_Arguments:
@@ -1690,7 +1690,7 @@ GameObject:
   - component: {fileID: 810873197}
   - component: {fileID: 810873196}
   m_Layer: 5
-  m_Name: Button
+  m_Name: W
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1761,8 +1761,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1386307165}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+      - m_Target: {fileID: 918509501}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
         m_MethodName: MoveUp
         m_Mode: 1
         m_Arguments:
@@ -1824,7 +1824,7 @@ GameObject:
   - component: {fileID: 878084850}
   - component: {fileID: 878084849}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1895,8 +1895,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1386307165}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+      - m_Target: {fileID: 918509501}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
         m_MethodName: MoveDown
         m_Mode: 1
         m_Arguments:
@@ -2039,13 +2039,63 @@ RectTransform:
   m_Children:
   - {fileID: 1862797627}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &918509500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 918509502}
+  - component: {fileID: 918509501}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &918509501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918509500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1a11b45f6cce84991f7c97c12f8208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1386307170}
+  black: {fileID: 2100000, guid: 932dbae4ad3cc194082c0f8e7a2ca502, type: 2}
+  blue: {fileID: 2100000, guid: 02749751789ac7c4e9aa53f325e32744, type: 2}
+  red: {fileID: 2100000, guid: f3289e8afbda62749822ad10fc529745, type: 2}
+  purple: {fileID: 2100000, guid: ac67d6d67cf663c4eb95c1abba3a549d, type: 2}
+--- !u!4 &918509502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918509500}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.7027087, y: -12.342224, z: 14.415722}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1386307169}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &947889224
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,8 +2344,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1386307165}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+      - m_Target: {fileID: 918509501}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
         m_MethodName: ChangeColorToBlack
         m_Mode: 1
         m_Arguments:
@@ -2563,8 +2613,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1386307165}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+      - m_Target: {fileID: 918509501}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
         m_MethodName: ChangeColorToPurple
         m_Mode: 1
         m_Arguments:
@@ -2832,8 +2882,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1386307165}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+      - m_Target: {fileID: 918509501}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
         m_MethodName: ChangeColorToBlue
         m_Mode: 1
         m_Arguments:
@@ -2997,7 +3047,7 @@ RectTransform:
   m_Children:
   - {fileID: 48193141}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3016,7 +3066,7 @@ GameObject:
   - component: {fileID: 1386307168}
   - component: {fileID: 1386307167}
   - component: {fileID: 1386307166}
-  - component: {fileID: 1386307165}
+  - component: {fileID: 1386307170}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -3024,22 +3074,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1386307165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1386307164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd1a11b45f6cce84991f7c97c12f8208, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  black: {fileID: 2100000, guid: 932dbae4ad3cc194082c0f8e7a2ca502, type: 2}
-  blue: {fileID: 2100000, guid: 02749751789ac7c4e9aa53f325e32744, type: 2}
-  red: {fileID: 2100000, guid: f3289e8afbda62749822ad10fc529745, type: 2}
-  purple: {fileID: 2100000, guid: ac67d6d67cf663c4eb95c1abba3a549d, type: 2}
 --- !u!136 &1386307166
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3111,14 +3145,26 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386307164}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.7027087, y: 13.342224, z: -14.415722}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 918509502}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1386307170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386307164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc5e8cf49ac37947a34f924a3b5d53e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1648315442
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,8 +3249,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1386307165}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+      - m_Target: {fileID: 918509501}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
         m_MethodName: Undo
         m_Mode: 1
         m_Arguments:
@@ -3337,8 +3383,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1386307165}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+      - m_Target: {fileID: 918509501}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
         m_MethodName: ChangeColorToRed
         m_Mode: 1
         m_Arguments:
@@ -3400,7 +3446,7 @@ GameObject:
   - component: {fileID: 1820167264}
   - component: {fileID: 1820167263}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3471,8 +3517,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1386307165}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+      - m_Target: {fileID: 918509501}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
         m_MethodName: MoveRight
         m_Mode: 1
         m_Arguments:

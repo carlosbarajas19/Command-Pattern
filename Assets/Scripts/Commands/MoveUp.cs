@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class MoveUp : ICommand
 {
-    GameObject player;
+    IPlayer player;
 
-    public MoveUp(GameObject player)
+    public MoveUp(IPlayer player)
     {
         this.player = player;
     }
 
     public void Execute()
     {
-        player.transform.position += Vector3.forward;
+        player.MoveUp();
     }
 
     public void Undo()
     {
-        player.transform.position += Vector3.back;
+        player.MoveDown();
     }
 }

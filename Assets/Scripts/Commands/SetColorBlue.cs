@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SetColorBlue : ICommand
 {
-    GameObject player;
+    IPlayer player;
     Material previousMaterial;
     Material newMaterial;
 
-    public SetColorBlue(GameObject player, Material previousMaterial, Material newMaterial)
+    public SetColorBlue(IPlayer player, Material previousMaterial, Material newMaterial)
     {
         this.player = player;
         this.previousMaterial = previousMaterial;
@@ -17,11 +17,11 @@ public class SetColorBlue : ICommand
 
     public void Execute()
     {
-        player.GetComponent<MeshRenderer>().material = newMaterial;
+        player.ChangeColor(newMaterial);
     }
 
     public void Undo()
     {
-        player.GetComponent<MeshRenderer>().material = previousMaterial;
+        player.ChangeColor(previousMaterial);
     }
 }

@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+
+    public Player player;
+
     List<ICommand> commands = new List<ICommand>();
 
-    public GameObject player;
     public Material black;
     public Material blue;
     public Material red;
@@ -16,7 +18,7 @@ public class PlayerInput : MonoBehaviour
 
     void Start()
     {
-        currentColor = black;
+        currentColor = GetComponent<Material>();
     }
 
     // Update is called once per frame
@@ -50,53 +52,53 @@ public class PlayerInput : MonoBehaviour
 
     public void MoveUp()
     {
-        MoveUp move = new MoveUp(gameObject);
+        MoveUp move = new MoveUp(player);
         commands.Add(move);
         move.Execute();
     }
     public void MoveDown()
     {
-        MoveDown move = new MoveDown(gameObject);
+        MoveDown move = new MoveDown(player);
         commands.Add(move);
         move.Execute();
     }
     public void MoveLeft()
     {
-        MoveLeft move = new MoveLeft(gameObject);
+        MoveLeft move = new MoveLeft(player);
         commands.Add(move);
         move.Execute();
     }
     public void MoveRight()
     {
-        MoveRight move = new MoveRight(gameObject);
+        MoveRight move = new MoveRight(player);
         commands.Add(move);
         move.Execute();
     }
 
     public void ChangeColorToRed()
     {
-        SetColorRed colorChange = new SetColorRed(gameObject, currentColor, red);
+        SetColorRed colorChange = new SetColorRed(player, currentColor, red);
         currentColor = red;
         commands.Add(colorChange);
         colorChange.Execute();
     }
     public void ChangeColorToBlack()
     {
-        SetColorBlack colorChange = new SetColorBlack(gameObject, currentColor, black);
+        SetColorBlack colorChange = new SetColorBlack(player, currentColor, black);
         currentColor = black;
         commands.Add(colorChange);
         colorChange.Execute();
     }
     public void ChangeColorToBlue()
     {
-        SetColorBlue colorChange = new SetColorBlue(gameObject, currentColor, blue);
+        SetColorBlue colorChange = new SetColorBlue(player, currentColor, blue);
         currentColor = blue;
         commands.Add(colorChange);
         colorChange.Execute();
     }
     public void ChangeColorToPurple()
     {
-        SetColorPurple colorChange = new SetColorPurple(gameObject, currentColor, purple);
+        SetColorPurple colorChange = new SetColorPurple(player, currentColor, purple);
         currentColor = purple;
         commands.Add(colorChange);
         colorChange.Execute();
@@ -109,7 +111,7 @@ public class PlayerInput : MonoBehaviour
             commands[commands.Count - 1].Undo();
             commands.RemoveAt(commands.Count - 1);
 
-            currentColor = gameObject.GetComponent<MeshRenderer>().material;
+            currentColor = player.gameObject.GetComponent<MeshRenderer>().material;
         }
     }
 }

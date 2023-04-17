@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class MoveDown : ICommand
 {
-    GameObject player;
+    IPlayer player;
 
-    public MoveDown(GameObject player)
+    public MoveDown(IPlayer player)
     {
         this.player = player;
     }
 
     public void Execute()
     {
-        player.transform.position += Vector3.back;
+        //player.transform.position += Vector3.back;
+        player.MoveDown();
     }
 
     public void Undo()
     {
-        player.transform.position += Vector3.forward;
+        //player.transform.position += Vector3.forward;
+        player.MoveUp();
     }
 }

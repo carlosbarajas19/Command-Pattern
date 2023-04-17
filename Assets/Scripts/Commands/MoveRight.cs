@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class MoveRight : ICommand
 {
-    GameObject player;
+    IPlayer player;
 
-    public MoveRight(GameObject player)
+    public MoveRight(IPlayer player)
     {
         this.player = player;
     }
 
     public void Execute()
     {
-        player.transform.position += Vector3.right;
+        player.MoveRight();
     }
 
     public void Undo()
     {
-        player.transform.position += Vector3.left;
+        player.MoveLeft();
     }
 }

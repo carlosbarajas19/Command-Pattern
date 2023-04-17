@@ -2,56 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IPlayer 
+public class Player : MonoBehaviour, IPlayer
 {
-    // Start is called before the first frame update
+    
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ChangeColor(Material color)
     {
-        
+        gameObject.GetComponent<MeshRenderer>().material = color;
+    }
+
+
+    public void MoveDown()
+    {
+        gameObject.transform.position += Vector3.back;
+    }
+
+    public void MoveLeft()
+    {
+        gameObject.transform.position += Vector3.left;
+    }
+
+    public void MoveRight()
+    {
+        gameObject.transform.position += Vector3.right;
     }
 
     public void MoveUp()
     {
-        
-    }
-    public void MoveDown()
-    {
-        
-    }
-    public void MoveLeft()
-    {
-        
-    }
-    public void MoveRight()
-    {
-       
+        gameObject.transform.position += Vector3.forward;
     }
 
-    public void ChangeColorToRed()
-    {
-        
-    }
-    public void ChangeColorToBlack()
-    {
-        
-    }
-    public void ChangeColorToBlue()
-    {
-        
-    }
-    public void ChangeColorToPurple()
-    {
-        
-    }
-
-    public void Undo()
-    {
-        
-    }
 }
